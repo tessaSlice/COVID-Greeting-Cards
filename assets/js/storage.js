@@ -1,7 +1,8 @@
 //add new key=>value to the HTML5 storage
-function SaveItem() {
-			
-	var name = document.forms.ShoppingList.name.value;
+function SaveItem(name) {
+	
+    var name = name;
+	//var name = document.forms.ShoppingList.name.value;
 	var data = document.forms.ShoppingList.data.value;
 	localStorage.setItem(name, data);
 	doShowAll();
@@ -74,10 +75,7 @@ function CheckBrowser() {
 		// we can use localStorage object to store data
 		return true;
 	} else {
-			return false;
+		return false;
 	}
 }
 //-------------------------------------------------
-/*
-You can extend this script by inserting data to database or adding payment processing API to shopping cart..
-*/

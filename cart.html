@@ -16,7 +16,7 @@
     </noscript>
 </head>
 
-<body class="is-preload">
+<body class="is-preload" onload="doShowAll()">
     <!-- Wrapper -->
     <div id="wrapper">
 
@@ -52,42 +52,19 @@
         </nav>
 
         <!-- Main -->
-        <div id="main" onload="doShowAll()">
+        <div id="main">
             <div class="inner">
                 <h1>Shopping Cart</h1>
                 <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-                <p>
-                    [Cart Shopping Stuff]
-                </p>
-                <h2>Shopping Cart</h2>
-                <p>Current Items in Cart</p>
+                
                 <form name=ShoppingList>
-
-                    <div id="main">
-                        <table>
-                            <tr>
-
-                                <td><b>Item:</b><input type=text name=name></td>
-                                <td><b>Quantity:</b><input type=text name=data></td>
-
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <input type=button value="Save" onclick="SaveItem()">
-                                    <input type=button value="Update" onclick="ModifyItem()">
-                                    <input type=button value="Delete" onclick="RemoveItem()">
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-
                     <div id="items_table">
-                        <h3>Shopping List</h3>
+                        <h3>Shopping Cart</h3>
                         <table id=list></table>
                         <p>
-                            <label><input type=button value="Clear" onclick="ClearAll()">
-                                <i>* Delete all items</i></label>
+                            <input type=button value="Clear" onclick="ClearAll()">
+                            <input type=button value="Refresh" onclick="doShowAll()">
+                            <label><i>* Delete all items</i></label>
                         </p>
                     </div>
                 </form>
