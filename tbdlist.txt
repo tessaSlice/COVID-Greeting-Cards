@@ -1,3 +1,0 @@
-- add form link onto website
-- as a button
-- as well as on the menu sidebar
