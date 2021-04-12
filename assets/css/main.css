@@ -2602,6 +2602,8 @@ input, select, textarea {
 				.tiles article > .image img {
 					display: block;
 					width: 100%;
+                    object-fit: contain;
+                    max-height: 250px;
 				}
 
 				.tiles article > .image:before {
